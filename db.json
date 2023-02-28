@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "title": "hello",
+      "body": "world",
+      "id": 1
+    },
+    {
+      "title": "hello",
+      "body": "worldgds",
+      "id": 2
+    }
+  ]
+}
