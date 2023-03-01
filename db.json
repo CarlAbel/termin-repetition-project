@@ -1,24 +1,28 @@
 {
-  "posts": [
+  "ratings": [
     {
       "id": 1,
-      "title": "My first post",
-      "description": "1"
+      "rating": 5,
+      "classID": 1,
+      "userID": 12
     },
     {
       "id": 2,
-      "title": "My second post",
-      "description": "2"
+      "rating": 5,
+      "classID": 2,
+      "userID": 14
     },
     {
       "id": 3,
-      "title": "My third post",
-      "description": "3"
+      "rating": 2,
+      "classID": 1,
+      "userID": 15
     },
     {
       "id": 4,
-      "title": "My fourth post",
-      "description": "4"
+      "rating": 5,
+      "classID": 4,
+      "userID": 16
     }
   ]
 }
