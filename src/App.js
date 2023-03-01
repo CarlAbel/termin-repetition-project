@@ -1,34 +1,33 @@
-import "./App.css"
+import { useEffect, useState } from "react"
+import axios from "axios"
 
 function App() {
-  function handleSubmit() {
-    fetch("http://localhost:3030/posts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        title: "hello",
-        body: "world",
-      }),
-    })
+  const [data, setData] = useState([])
+  const [detailData, setDetailData] = useState({})
+
+  async function detail(id){
+    try {
+      const response = await axios.get("http://localhost:3030/posts/" + id)
+      setDetailData(response.data)
+    } catch (error) {}
+
   }
 
+  useEffect(function () {
+    (async function () {
+      try {
+        const response = await axios.get("http://localhost:3030/posts")
+        setData(response.data)
+      } catch (error) {}
+    })()
+  }, [])
   return (
     <div className="App">
-      <form>
-        <label>
-          Title
-          <input type="text" name="title" />
-        </label>
-        <label>
-          description
-          <input type="text" name="body" />
-        </label>
-        <button onClick={handleSubmit} type="submit">
-          Save
-        </button>
-      </form>
+      {data?.map((item) => 
+        <button onClick={ () => detail(item.id)}>{item.title}</button>
+      )}
+      <h1>{detailData.title}</h1>
+      <p>{detailData.description}</p>
     </div>
   )
 }

@@ -1,14 +1,24 @@
 {
   "posts": [
     {
-      "title": "hello",
-      "body": "world",
-      "id": 1
+      "id": 1,
+      "title": "My first post",
+      "description": "1"
     },
     {
-      "title": "hello",
-      "body": "worldgds",
-      "id": 2
+      "id": 2,
+      "title": "My second post",
+      "description": "2"
+    },
+    {
+      "id": 3,
+      "title": "My third post",
+      "description": "3"
+    },
+    {
+      "id": 4,
+      "title": "My fourth post",
+      "description": "4"
     }
   ]
 }
